@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Tracker</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script> -->
+    
     <link rel="stylesheet" href = "assets/css/style.css">
     <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -19,25 +25,47 @@
     </div>
 
 <div class = "col-md-12">
-    <div class= "col-md-4">Current Train Schedule
-        <!-- <div class="row">
+    <!-- <div class= "col-md">Current Train Schedule
+        <div class="row">
             <div class="col-md">
-                Train Name
+                Train Name<p id = "name"></p>
             </div>
             <div class="col-md">
-                Destination
+                Destination<p id = "dest">test</p>
             </div>
             <div class="col-md">
-                Frequency
+                Frequency<p id = "freq"></p>
             </div>
             <div class="col-md">
-                Next Arrival
+                Next Arrival<p id = "arr"></p>
             </div>
             <div class="col-md">
                 Minutes Away
             </div>
-        </div> -->
+        </div>
+    </div> -->
+</div>
+
+<div class ="col-md-12">
+    <form>
+    <div class="col-md">
+        <label for="train-input">Train Name</label>
+        <input class="train-name" id = "train-input" type="text" placeholder="Name">
     </div>
+    <div class="col-md">
+        <label for="destination-input">Destination</label>
+        <input class="destination-name" id="destination-input" type="text" placeholder="Where">
+    </div>
+    <div class="col-md">
+        <label for="time-input">First Train Time</label>
+        <input class="time-name" id="time-input" type="text" placeholder="00:00">
+    </div>
+    <div class="col-md">
+        <label for="frequency-input">Frequency</label>
+        <input class="frequency-name" id="frequency-input" type="text" placeholder="When">
+    </div>
+    <button class="btn btn-primary" id="add-train">Submit</button>
+    </form>
 </div>
 
 
@@ -54,12 +82,7 @@
 
 
 
-
-
 </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
-        <script type="text/javascript" src="assets/javascript/script.js"></script>
+    
 </body>
 </html>
