@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/script.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/moment.js"></script>
     
     <link rel="stylesheet" href = "assets/css/style.css">
     <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -24,46 +24,45 @@
         <p class="lead">Choo Choo!</p>
     </div>
 
-<div class = "col-md-12">
-    <!-- <div class= "col-md">Current Train Schedule
-        <div class="row">
-            <div class="col-md">
-                Train Name<p id = "name"></p>
-            </div>
-            <div class="col-md">
-                Destination<p id = "dest">test</p>
-            </div>
-            <div class="col-md">
-                Frequency<p id = "freq"></p>
-            </div>
-            <div class="col-md">
-                Next Arrival<p id = "arr"></p>
-            </div>
-            <div class="col-md">
-                Minutes Away
-            </div>
+<div class="col-md">Current Train Schedule
+    <div class="row">
+        <div class="col-md">
+            Train Name<p id="name"></p>
         </div>
-    </div> -->
+        <div class="col-md">
+            Destination<p id="dest"></p>
+        </div>
+        <div class="col-md">
+            Frequency<p id="freq"></p>
+        </div>
+        <div class="col-md">
+            Next Arrival<p id="arr"></p>
+        </div>
+        <div class="col-md">
+            Minutes Away<p id="min"></p>
+        </div>
+    </div>
 </div>
 
 <div class ="col-md-12">
     <form>
     <div class="col-md">
         <label for="train-input">Train Name</label>
-        <input class="train-name" id = "train-input" type="text" placeholder="Name">
+        <input class="form-control" id = "train-input" type="text" placeholder="Name">
     </div>
     <div class="col-md">
         <label for="destination-input">Destination</label>
-        <input class="destination-name" id="destination-input" type="text" placeholder="Where">
+        <input class="form-control" id="destination-input" type="text" placeholder="Where">
     </div>
     <div class="col-md">
         <label for="time-input">First Train Time</label>
-        <input class="time-name" id="time-input" type="text" placeholder="00:00">
+        <input class="form-control" id="time-input" type="text" placeholder="00:00">
     </div>
     <div class="col-md">
         <label for="frequency-input">Frequency</label>
-        <input class="frequency-name" id="frequency-input" type="text" placeholder="When">
+        <input class="form-control" id="frequency-input" type="text" placeholder="When">
     </div>
+    <br>
     <button class="btn btn-primary" id="add-train">Submit</button>
     </form>
 </div>

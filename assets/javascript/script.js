@@ -12,10 +12,12 @@ var database = firebase.database();
 
 console.log(database);
 
+$(document).ready(function() {
+
 
 $("#add-train").on("click", function(event) {
     event.preventDefault();
-
+console.log("clicked!");
 
 var trainName = $("#train-input").val().trim();
 var trainDestination = $("#destination-input").val().trim();
@@ -55,6 +57,59 @@ database.ref().on("child_added", function(childSnapshot) {
     console.log(trainTime);
     console.log(trainFrequency);
 
-      var newItem =  $("#name").append($("<p>").text(trainName));
+
+    // var tFrequency = 3;
+    // var firstTime = "3:00";
+    // var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    // var time = moment();
+    // console.log("CURRENT TIME: " + moment(time).format("hh:mm"));
+
+    // var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    
+    // var trainRemainder = diffTime%tFrequency;
+    // console.log(trainRemainder);
+
+    // var minutes = tFrequency - trainRemainder;
+
+
+
+    var time = moment();
+    console.log(time);
+    var timeChange = moment(trainTime, "hh:mm").subtract(1, "years");
+    console.log(timeChange);
+    var timeDifference = moment().diff(moment(timeChange), "minutes");
+
+    console.log(timeDifference);
+    var remTime = timeDifference % trainFrequency
+    var timePopsicle = trainFrequency - remTime
+
+    console.log(timePopsicle);
+    var arrivingTime = moment().add(timePopsicle, "minutes").format("hh:mm");
+
+
+
+    var newItem = $("#name").append($("<p>").text(trainName));
+    var newItem = $("#dest").append($("<p>").text(trainDestination));
+    var newItem = $("#freq").append($("<p>").text(trainFrequency));
+    var newItem = $("#arr").append($("<p>").text(trainTime));
+    var newItem = $("#min").append($("<p>").text(arrivingTime));
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
